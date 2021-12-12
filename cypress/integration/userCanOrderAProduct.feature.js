@@ -9,7 +9,7 @@ describe('Clicking "Add to order" button for a specific product', () => {
     }).as("Orders.create");
     cy.visit("/");
     cy.get("[data-cy=product-list]")
-      .children()
+      .children('[data-cy=product-item]')
       .first()
       .within(() => {
         cy.get("[data-cy=add-to-order-button]").click();

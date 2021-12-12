@@ -13,7 +13,7 @@ describe("A user that visits the application", () => {
   });
 
   it("is expected to see a collection of product", () => {
-    cy.get("[data-cy=product-list]").children().should("have.length", 3);
+    cy.get("[data-cy=product-list]").children('[data-cy=product-item]').should("have.length", 3);
   });
 
   it("is expected to see products with a name ", () => {

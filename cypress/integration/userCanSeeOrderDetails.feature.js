@@ -12,13 +12,13 @@ describe('A user clicking on "View Order"', () => {
     cy.visit("/");
 
     cy.get("[data-cy=product-list]")
-      .children()
+      .children('[data-cy=product-item]')
       .first()
       .within(() => {
         cy.get("[data-cy=add-to-order-button]").click();
       });
     cy.get("[data-cy=product-list]")
-      .children()
+      .children('[data-cy=product-item]')
       .last()
       .within(() => {
         cy.get("[data-cy=add-to-order-button]").click();

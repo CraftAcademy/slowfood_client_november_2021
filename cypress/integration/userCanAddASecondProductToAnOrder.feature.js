@@ -11,10 +11,10 @@ describe('A user clicking on "Add to Order" button for a second product', () => 
     }).as("Orders.update");
     cy.visit('/');
 
-    cy.get("[data-cy=product-list]").children().first().within(() => {
+    cy.get("[data-cy=product-list]").children('[data-cy=product-item]').first().within(() => {
       cy.get("[data-cy=add-to-order-button]").click();
     });
-    cy.get("[data-cy=product-list]").children().last().within(() => {
+    cy.get("[data-cy=product-list]").children('[data-cy=product-item]').last().within(() => {
       cy.get("[data-cy=add-to-order-button]").click();
     });
   });
